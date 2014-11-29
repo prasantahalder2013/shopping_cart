@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <td>Product Name</td>
+    <td>Price per unit</td>
+    <td>Total Unit</td>
+    <td>Action</td>
+  </tr>
+  <% @products.each do |product| %>
+  <tr>
+    <td><%= product.name %></td>
+    <td><%= product.total_unit %></td>
+    <td><%= product.price_per_unit %></td>
+    <td>
+      <%= link_to 'Add To Cart', 'javescript:void(0)', onClick: "retutn add_to_cart(#{product.id})" %>
+    </td>
+  </tr>
+  <% end %>
+</table>
